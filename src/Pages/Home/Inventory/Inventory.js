@@ -1,7 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Inventory = ({ inventory }) => {
-    const { name, img, description, price, quantity, supplier } = inventory;
+    const {id, name, img, description, price, quantity, supplier } = inventory;
+    const navigate = useNavigate();
+    const navigateToDetail = id => {
+        navigate(`/inventory/${id}`);
+    }
     return (
         <div className='col-sm-12 col-md-6 col-lg-4 g-5'>
             <div className="card">
@@ -9,11 +14,11 @@ const Inventory = ({ inventory }) => {
                 <div className="card-body">
                     <h4 className="card-title">{name}</h4>
                     <h3>${price}</h3>
-                    <p className="card-text">{description}</p>
+                    <small className="card-text">{description}</small>
                     <p>Supplier Name: {supplier}</p>
                     <div className='d-flex justify-content-between'>
                         <p>Quantity: {quantity}</p>
-                        <button className="btn btn-primary">Update</button>
+                        <button onClick={() => navigateToDetail(id)} className="btn btn-primary">Update</button>
                     </div>
                     
                 </div>
