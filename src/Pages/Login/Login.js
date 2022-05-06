@@ -1,8 +1,11 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
+import Loading from '../Shared/Loading/Loading';
 import Social from './Social/Social';
 
 const Login = () => {
@@ -11,16 +14,26 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
+    let errorElement;
 
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+      ] = useSignInWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+      const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
       if (user) {
         navigate(from, { replace: true });
+    }
+    if (error) {
+        errorElement = <p className='text-danger'>Error: Your password or email didn't match</p>
+      }
+
+    if(loading){
+        return <Loading></Loading>;
     }
 
     const handleSubmit = event => {
@@ -32,6 +45,18 @@ const Login = () => {
 
     const navigateSignup = event => {
         navigate('/signup');
+    }
+
+    const resetPassword = async() =>{
+        const email = emailRef.current.value;
+            if(email){
+                await sendPasswordResetEmail(email);
+            toast('Sent email to reset your password');
+            }
+            else{
+                toast('please enter your email address');
+            }
+          
     }
     return (
         <div className='login-container w-50 mx-auto'>
@@ -47,11 +72,13 @@ const Login = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required/>
                 </Form.Group>
                 
-                <Button variant="primary w-2/5 mx-auto d-block mb-4 w-sm-50" type="submit">Login</Button>
+                <Button variant="primary w-2/5 mx-auto d-block mb-4" type="submit">Login</Button>
             </Form>
-            {/* <p>Forgot Your Password? <button className='btn btn-link text-danger pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p> */}
-            <p>Don't have an account? <Link to='/signup' className='text-danger pe-auto text-decoration-none' onClick={navigateSignup}>Please Sign Up</Link> </p>
+            {errorElement}
+            <p>Forgot Your Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+            <p>Don't have an account? <Link to='/signup' className='text-info pe-auto text-decoration-none' onClick={navigateSignup}>Please Sign Up</Link> </p>
             <Social></Social>
+            <ToastContainer/>
         </div>
     );
 };

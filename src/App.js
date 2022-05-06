@@ -1,12 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About';
+import AddList from './Pages/AddList/AddList';
 import Blogs from './Pages/Blogs/Blogs';
 import Home from './Pages/Home/Home/Home';
 import InventoryDetail from './Pages/InventoryDetail/InventoryDetail';
 import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import SignUp from './Pages/Login/SignUp/SignUp';
+import ManageList from './Pages/ManageList/ManageList';
+import MyList from './Pages/MyList/MyList';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
@@ -27,6 +30,9 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/manage' element={<ManageList></ManageList>}></Route>
+        <Route path='/add' element={<AddList></AddList>}></Route>
+        <Route path='/mylist' element={<MyList></MyList>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

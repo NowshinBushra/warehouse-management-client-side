@@ -10,12 +10,12 @@ const Inventory = ({ inventory }) => {
     return (
         <div className='col-sm-12 col-md-6 col-lg-4 g-5'>
             <div className="card">
-                <img src={img} className="card-img-top" alt="..." />
+                <img src={img} className="card-img-top w-100" alt="..." />
                 <div className="card-body">
                     <h4 className="card-title">{name}</h4>
                     <h3>${price}</h3>
                     <small className="card-text">{description}</small>
-                    <p>Supplier Name: {supplier}</p>
+                    <p>Supplier: {supplier}</p><br />
                     <div className='d-flex justify-content-between'>
                         <p>Quantity: {quantity}</p>
                         <button onClick={() => navigateToDetail(id)} className="btn btn-primary">Update</button>

@@ -3,6 +3,8 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Social from '../Social/Social';
+import Loading from '../../Shared/Loading/Loading';
 
 const SignUp = () => {
     const emailRef = useRef('');
@@ -18,6 +20,10 @@ const SignUp = () => {
 
     if (user) {
         navigate('/home');
+    }
+
+    if(loading){
+        return <Loading></Loading>;
     }
 
     const navigateLogin = () => {
@@ -55,6 +61,7 @@ const SignUp = () => {
                 <Button variant="primary w-2/5 mx-auto d-block mb-4 w-sm-50" type="submit">Sign Up</Button>
             </Form>
             <p>Already have an account? <Link to='/login' className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
+            <Social></Social>
         </div>
     );
 };

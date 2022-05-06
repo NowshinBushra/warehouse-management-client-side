@@ -1,39 +1,102 @@
 [
     {"id": 1, 
-     "img": "https://i.ibb.co/VBd2B64/Laser.jpg", 
-     "name": "Laser Therapy", 
-     "price": "150", 
-     "description": "Reduces wrinkles and scars, even out skin coloring, tighten your skin and remove lesions by laser skin resurfacing."
+     "img": "https://i.ibb.co/8cZgqVz/1.jpg", 
+     "name": "BMW 8-serie", 
+     "price": "85000", 
+     "description": "2998 cc | 11 kmpl | Petrol | 2-door coupe | grey",
+     "supplier": "Bayerische Motoren Werke AG",
+     "quantity": "23"
     },
 
     {"id": 2, 
-        "img": "https://i.ibb.co/hV4zG0Q/Lip.jpg", 
-        "name": "Lip Augmentation", 
-        "price": "125", 
-        "description": "A skilled cosmetic surgeon can use one of many techniques to help you achieve smooth, voluptuous lips with a natural look."
+        "img": "https://i.ibb.co/M8fM9QL/11.jpg", 
+        "name": "Bentley Mulsanne", 
+        "price": "259000", 
+        "description": "5000 cc | 210,000 miles | Petrol | 4-door | sedan | blue",
+        "supplier": "Bentley Motors",
+        "quantity": "11"
     },
+    
     {"id": 3, 
-        "img": "https://i.ibb.co/bQsdL6t/faceLift.jpg", 
-        "name": "Face Lifting", 
-        "price": "100", 
-        "description": "Although its a nonsurgical cosmetic treatment, but noninvasive procedures can be very effective at targeting loss of facial volume and deep creases"
+        "img": "https://i.ibb.co/3hGSycX/9.jpg", 
+        "name": "Mercedes-Benz AMG GT", 
+        "price": "14600", 
+        "description": "4800 cc | 160,000 miles | Diesel | 2-door coupe | yellow",
+        "supplier": "Daimler AG",
+        "quantity": "46"
     },
+    
+    
     {"id": 4, 
-        "img": "https://i.ibb.co/sQLCSb4/rair-Removal.jpg", 
-        "name": "Hair Removal", 
-        "price": "100", 
-        "description": "Remove All your unwanted hair effectively. We safely and effectively treats all skin types, both male and female."
+        "img": "https://i.ibb.co/bPgCnCn/4.jpg", 
+        "name": "Cadillac Escalade", 
+        "price": "77000", 
+        "description": "6200 cc | 520,000 miles | Petrol | 5-door SUV | brown",
+        "supplier": "General Motors (GM)",
+        "quantity": "32"
     },
     {"id": 5, 
-        "img": "https://i.ibb.co/sQLCSb4/rair-Removal.jpg", 
-        "name": "Hair Removal", 
-        "price": "100", 
-        "description": "Remove All your unwanted hair effectively. We safely and effectively treats all skin types, both male and female."
+        "img": "https://i.ibb.co/NtCrjTm/5.jpg", 
+        "name": "BMW 7-series", 
+        "price": "86800", 
+        "description": "2998 cc | Petrol 39.53 kmpl | Diesel 17.66 kmpl | 4-door | White",
+        "supplier": "Bayerische Motoren Werke AG",
+        "quantity": "51"
     },
     {"id": 6, 
-        "img": "https://i.ibb.co/sQLCSb4/rair-Removal.jpg", 
-        "name": "Hair Removal", 
-        "price": "100", 
-        "description": "Remove All your unwanted hair effectively. We safely and effectively treats all skin types, both male and female."
+        "img": "https://i.ibb.co/fN7k911/6.jpg", 
+        "name": "Audi A4", 
+        "price": "23000", 
+        "description": "1998 cc  | 245,000 miles | Diesel | 4-door | sedan | blue",
+        "supplier": "Volkswagen",
+        "quantity": "43"
+    },
+    {"id": 7, 
+        "img": "https://i.ibb.co/sWtL1V5/7.jpg", 
+        "name": "Ferrari GTC4", 
+        "price": "260,000", 
+        "description": "Front Wheel | 320,000 miles | Diesel | 3-door coupe | red",
+        "supplier": "MARELLI",
+        "quantity": "17"
+    },
+    {"id": 8, 
+        "img": "https://i.ibb.co/bgq25Zt/8.jpg", 
+        "name": "Ferrari Portofino", 
+        "price": "140,000", 
+        "description": "Front Wheel | 320,000 miles | Diesel | 2-door convertible | silver",
+        "supplier": "MARELLI",
+        "quantity": "16"
+    },
+    {"id": 9, 
+        "img": "https://i.ibb.co/h25KqS9/3.jpg", 
+        "name": "Cadillac ATS ", 
+        "price": "38,995", 
+        "description": "2500 cc | 160,000 miles | Diesel | 2-door coupe | red",
+        "supplier": "General Motors (GM)",
+        "quantity": "15"
+    },
+    {"id": 10, 
+        "img": "https://i.ibb.co/DVnX3YB/10.jpg", 
+        "name": "Mercedes-Benz EQC", 
+        "price": "140900", 
+        "description": "AWD/4WD | 7,000 miles | Electric | 5-door SUV | white",
+        "supplier": "Daimler AG",
+        "quantity": "15"
+    },
+    {"id": 11, 
+        "img": "https://i.ibb.co/mRt2fxt/2.jpg", 
+        "name": "Audi A8", 
+        "price": "70000", 
+        "description": "2995 cc | 11.7 kmpl | Petrol | 4-door sedan | silver",
+        "supplier": "Volkswagen",
+        "quantity": "14"
+    },
+    {"id": 12, 
+        "img": "https://i.ibb.co/j4LGKPT/12.jpg", 
+        "name": "Ford Mustang Fastback", 
+        "price": "34700", 
+        "description": "5000 cc | Front Wheel | 2-door coupe | Diesel | Orange",
+        "supplier": "Ford",
+        "quantity": "21"
     }
 ]
