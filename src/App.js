@@ -30,9 +30,21 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/manage' element={<ManageList></ManageList>}></Route>
-        <Route path='/add' element={<AddList></AddList>}></Route>
-        <Route path='/mylist' element={<MyList></MyList>}></Route>
+        <Route path='/manage' element={
+          <RequireAuth>
+            <ManageList></ManageList>
+          </RequireAuth>
+        }></Route>
+        <Route path='/add' element={
+          <RequireAuth>
+            <AddList></AddList>
+          </RequireAuth>
+        }></Route>
+        <Route path='/mylist' element={
+          <RequireAuth>
+            <MyList></MyList>
+          </RequireAuth>
+        }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

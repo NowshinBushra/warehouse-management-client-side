@@ -4,7 +4,7 @@
      "name": "BMW 8-serie", 
      "price": "85000", 
      "description": "2998 cc | 11 kmpl | Petrol | 2-door coupe | grey",
-     "supplier": "Bayerische Motoren Werke AG",
+     "supplier": "Bayerische Motoren Werke",
      "quantity": "23"
     },
 
@@ -40,7 +40,7 @@
         "name": "BMW 7-series", 
         "price": "86800", 
         "description": "2998 cc | Petrol 39.53 kmpl | Diesel 17.66 kmpl | 4-door | White",
-        "supplier": "Bayerische Motoren Werke AG",
+        "supplier": "Bayerische Motoren Werke",
         "quantity": "51"
     },
     {"id": 6, 
