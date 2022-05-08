@@ -1,11 +1,11 @@
 import React from 'react';
 import './Banner.css';
-import banner1 from '../../../image/banner1.jpg';
+import banner from '../../../image/banner.png';
 const Banner = () => {
     return (
         <div>
             <div className="card text-white mb-5">
-                <img src={banner1} className="card-img banner" alt=""/>
+                <img src={banner} className="card-img banner" alt=""/>
                     <div className="card-img-overlay overflow-auto banner-info">
                         <h1 className="card-title">Welcome To Vehica Car Dealer</h1>
                         <h2 className="card-title">With certified cars</h2>

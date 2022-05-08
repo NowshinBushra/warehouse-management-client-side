@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import useInventory from '../../../hooks/useInventory';
 import Inventory from '../Inventory/Inventory';
 
 const Inventories = () => {
 
-    const [inventories, setInventories] = useState([]);
+    const [inventories, setInventories] = useInventory();
 
-    useEffect(() => {
-        fetch('inventories.json')
-            .then(res => res.json())
-            .then(data => setInventories(data));
-    }, [])
-
+    
     // const navigate = useNavigate();
     // const navigateInventory = event => {
     //     navigate('/manage');
@@ -22,8 +18,8 @@ const Inventories = () => {
                 <h2 style={{color: "#4d1750d1"}} className='text-center'>Featured Listing</h2>
                 <div className='row'>
                     {
-                        inventories.map(inventory => <Inventory
-                            key={inventory.id}
+                        inventories.slice(0,6).map(inventory => <Inventory
+                            key={inventory._id}
                             inventory={inventory}
                         ></Inventory>)
                     }

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Social from '../Social/Social';
@@ -10,16 +10,23 @@ const SignUp = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+    let errorElement;
 
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     if (user) {
-        navigate('/home');
+        navigate(from, { replace: true });
+        
+    }
+    if (error) {
+        errorElement = <p className='text-danger'>Error: check your email address</p>
     }
 
     if(loading){
@@ -35,7 +42,7 @@ const SignUp = () => {
         const name = event.target.name.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        console.log(email, password);
+       
         createUserWithEmailAndPassword(email, password);
 
     }
@@ -60,8 +67,9 @@ const SignUp = () => {
                 
                 <Button variant="primary w-2/5 mx-auto d-block mb-4 w-sm-50" type="submit">Sign Up</Button>
             </Form>
+            {errorElement}
             <p>Already have an account? <Link to='/login' className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
-            <Social></Social>
+            <Social></Social><br /><br /><br /><br />
         </div>
     );
 };
