@@ -11,7 +11,8 @@ Open [.....](....) to view it in your browser.
 * Used toggle button where you can switch between the login and signUp form.
 * Implemented google sign in method.
 * Used requireAuth function to create some protected routes.
-* Implemented email, password authentication and email verification system.   
+* Implemented email, password authentication and email verification system.
+* Loaded from server (used MongoDB)   
 
 ## Libraries and frameworks used in this project
 * React router
@@ -19,3 +20,4 @@ Open [.....](....) to view it in your browser.
 * css bootstrap
 * react router hook
 * firebase
+* react hook form

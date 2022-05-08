@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import useInventory from '../../hooks/useInventory';
 import ManageSingleItem from './ManageSingleItem';
@@ -17,7 +17,7 @@ const ManageList = () => {
             })
             .then(res => res.json())
             .then(result => {
-                
+                console.log(result);
                 const remaining = inventories.filter(inventory => inventory._id !== id);
                 setInventories(remaining);
                 })
@@ -27,7 +27,7 @@ const ManageList = () => {
     } 
 
     return (
-        <div className='container mb-5'>
+        <div style={{marginBottom: "150px"}}  className='container'>
             <h2 style={{ color: "#4d1750d1" }} className='text-center mt-5'>Manage All Inventories</h2>
             <div className='d-flex flex-row-reverse bd-highlight pe-auto mb-4'>
                 <button className='btn btn-light rounded-pill border border-4'><Link className='fw-bold' to='/add' style={{ color: "#4d1750d1" }}>Add Items</Link></button>
@@ -42,7 +42,7 @@ const ManageList = () => {
                             <div className="col-8">
                                 <div className="card-body">
                                     <h4 className="card-title">{item.name}</h4>
-                                    <h5 className="card-title">$ {item.price}</h5>
+                                    <h5 className="card-text">$ {item.price}</h5>
                                     <small className="card-text">{item.description}</small>
                                     <p>Quantity: {item.quantity}</p>
                                     <button  onClick={() => handleDelete(item._id)} style={{ border: "3px solid #942560", color: "#801b50" }} className='btn btn-light rounded'>Delete</button>
