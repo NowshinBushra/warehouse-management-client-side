@@ -30,7 +30,7 @@ const InventoryDetail = () => {
                             <Card.Text>Supplier: {inventory.supplier}</Card.Text>
                             <Card.Text>Quantity: {inventory.quantity}</Card.Text>
                             <Button variant="primary">Delivered</Button>
-                            <div><input type="text" value="add quantity"/>
+                            <div className='mt-2'><input type="text" value="add quantity"/>
                             <button className='btn btn-info'>Restock</button></div>
                         </Card.Body>
                     </Card>
