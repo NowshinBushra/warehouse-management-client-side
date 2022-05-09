@@ -5,15 +5,17 @@ import { Link, useParams } from 'react-router-dom';
 const InventoryDetail = () => {
     const { _id } = useParams();
     const [inventory, setInventory] = useState({});
+    // const [carQuantity, setCarQuantity] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/car/${_id}`)
+        fetch(`https://glacial-temple-62836.herokuapp.com/car/${_id}`)
             .then(res => res.json())
-            .then(data => setInventory(data));
-    }, [])
+            .then(data => setInventory(data)); 
+    }, []);
+
 
     return (
-        <div className='d-flex justify-content-center'>
+        <div style={{ marginBottom: "150px" }} className='d-flex justify-content-center'>
             <div>
                 <div className='text-center mt-5 mb-5'>
                     <h2>Inventory Detail</h2>
@@ -28,6 +30,8 @@ const InventoryDetail = () => {
                             <Card.Text>Supplier: {inventory.supplier}</Card.Text>
                             <Card.Text>Quantity: {inventory.quantity}</Card.Text>
                             <Button variant="primary">Delivered</Button>
+                            <div><input type="text" value="add quantity"/>
+                            <button className='btn btn-info'>Restock</button></div>
                         </Card.Body>
                     </Card>
                 </div>

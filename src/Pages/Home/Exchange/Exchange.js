@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 const Exchange = () => {
     return (
         <div style={{ marginBottom: "150px" }} className="container">
-            <h3 className='text-center mb-5' style={{color: "#4d1750d1"}}>CAR EXCHANGE</h3>
+            <h3 className='text-center mb-5' style={{color: "#4d1750d1"}}>CAR EXCHANGE!!</h3>
+            <p className='text-center'>Interested in trading in your current vehicle? It would probably be good to have an estimate of what it's worth first. After all, trading in a vehicle is a lot less hassle than selling it yourself. And you can often lower your payments by trading in a vehicle as well.</p>
             <div className="row align-items-center">
                 <div className="col">
                     <h5>Car Information</h5>

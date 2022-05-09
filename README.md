@@ -3,7 +3,7 @@
 Vehico Mart Warehouse
 
 ## Live Website Link
-Open [.....](....) to view it in your browser.
+Open [https://vehico-mart-services.web.app/](https://vehico-mart-services.web.app/) to view it in your browser.
 
 ## Website Features and Functions
 * This website homepage includes navigation bar, banner, inventory container,  and footer.
@@ -12,7 +12,8 @@ Open [.....](....) to view it in your browser.
 * Implemented google sign in method.
 * Used requireAuth function to create some protected routes.
 * Implemented email, password authentication and email verification system.
-* Loaded from server (used MongoDB)   
+* Loaded from server (used MongoDB)
+* used heroku to server side deploy   
 
 ## Libraries and frameworks used in this project
 * React router

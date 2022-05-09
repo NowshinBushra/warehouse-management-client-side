@@ -6,7 +6,7 @@ const AddList = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         
-        const url = `http://localhost:5000/car/`;
+        const url = `https://glacial-temple-62836.herokuapp.com/car/`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -21,7 +21,7 @@ const AddList = () => {
     };
     return (
 
-        <div className='w-50 mt-5 mx-auto'>
+        <div style={{ marginBottom: "150px" }} className='w-50 mt-5 mx-auto'>
             <h1 style={{color: "#4d1750d1"}} className='text-center'>Add New Item</h1>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
             <input className='mb-2 p-1' placeholder='Product Name' {...register("name")} />

@@ -10,16 +10,16 @@
 
 //     const proceed = window.confirm('Are you sure you want to delete?');
 //     if (proceed){
-//         const url = `http://localhost:5000/car/${id}`;
+//         const url = `https://glacial-temple-62836.herokuapp.com/car/${id}`;
 //         fetch(url, {
 //             method: 'DELETE'
 //         })
 //         .then(res => res.json())
 //         .then(result => {setInventories(inventories.filter(inventory => inventory._id !== id));
             
-//             // const remaining = inventories.filter(inventory => inventory._id !== id);
+//             const remaining = inventories.filter(inventory => inventory._id !== id);
             
-//             console.log(result);
+//             setInventories(remaining);
 //         })
 //     }
     
